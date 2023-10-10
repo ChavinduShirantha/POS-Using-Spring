@@ -10,8 +10,9 @@ import java.math.BigDecimal;
 
 /**
  * @author : Chavindu
- * created : 10/10/2023-4:15 PM
+ * created : 10/10/2023-5:11 PM
  **/
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,4 +23,5 @@ public class Item {
     private String description;
     private int qtyOnHand;
     private BigDecimal unitPrice;
+
 }

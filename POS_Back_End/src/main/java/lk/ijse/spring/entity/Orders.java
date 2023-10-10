@@ -10,20 +10,24 @@ import java.util.List;
 
 /**
  * @author : Chavindu
- * created : 10/10/2023-4:15 PM
+ * created : 10/10/2023-5:11 PM
  **/
-@Entity
-@NoArgsConstructor
+
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
+@Entity
 public class Orders {
     @Id
     private String oid;
+    //Out=verse
     @ManyToOne(cascade = {CascadeType.REFRESH,CascadeType.DETACH})
-    @JoinColumn(name = "customerID",referencedColumnName = "id",nullable = false)
+    @JoinColumn(name = "customerID",referencedColumnName = "id",nullable = true)
     private Customer cusID;
     private LocalDate date;
 
+    //Inverse
     @OneToMany(mappedBy = "orders",cascade = CascadeType.ALL)
     private List<OrderDetails> orderDetails;
 }
+

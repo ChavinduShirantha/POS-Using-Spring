@@ -215,7 +215,7 @@
         $("#tblCustomer").empty();
 
         $.ajax({
-            url: 'http://localhost:8080/Back_End/pages/customer',
+            url: 'http://localhost:8080/POS_Back_End_war/customer',
             dataType: "json",
             success: function (res) {
                 console.log(res);
@@ -238,7 +238,7 @@
         console.log(formData)
 
         $.ajax({
-            url: 'http://localhost:8080/Back_End/pages/customer',
+            url: 'http://localhost:8080/POS_Back_End_war/customer',
             method: "post",
             data: formData,
             success: function (res) {
@@ -257,7 +257,7 @@
         let cusID = $("#txtCusID").val();
 
         $.ajax({
-            url: 'http://localhost:8080/Back_End/pages/customer?cusID=' + cusID,
+            url: 'http://localhost:8080/POS_Back_End_war/customer?cusID=' + cusID,
             method: "delete",
             success: function (res) {
                 alert(res.message);
@@ -277,7 +277,7 @@
         $("#tblCustomer").empty();
 
         $.ajax({
-            url: 'http://localhost:8080/Back_End/pages/customer',
+            url: 'http://localhost:8080/POS_Back_End_war/customer',
             method: "get",
             success: function (res) {
                 console.log(res.message);
@@ -309,7 +309,7 @@
         }
 
         $.ajax({
-            url: 'http://localhost:8080/Back_End/pages/customer',
+            url: 'http://localhost:8080/POS_Back_End_war/customer',
             method: "put",
             contentType: "application/json",
             data:JSON.stringify(customer),
