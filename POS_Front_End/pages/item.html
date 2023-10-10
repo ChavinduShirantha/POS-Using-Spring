@@ -212,13 +212,13 @@
         $("#tblItem").empty();
 
         $.ajax({
-            url: 'http://localhost:8080/Back_End/pages/item',
+            url: 'http://localhost:8080/POS_Back_End_war/item',
             dataType: "json",
             success: function (res) {
                 console.log(res);
 
                 for (let item of res.data) {
-                    let row = `<tr><td>${item.code}</td><td>${item.description}</td><td>${item.unitPrice}</td><td>${item.qty}</td></tr>`;
+                    let row = `<tr><td>${item.code}</td><td>${item.description}</td><td>${item.unitPrice}</td><td>${item.qtyOnHand}</td></tr>`;
                     $("#tblItem").append(row);
                 }
                 bindItemTrEvents();
@@ -235,7 +235,7 @@
         console.log(formData)
 
         $.ajax({
-            url: 'http://localhost:8080/Back_End/pages/item',
+            url: 'http://localhost:8080/POS_Back_End_war/item',
             method: "post",
             data: formData,
             success: function (res) {
@@ -254,7 +254,7 @@
         let code = $("#txtItemCode").val();
 
         $.ajax({
-            url: 'http://localhost:8080/Back_End/pages/item?item-ID=' + code,
+            url: 'http://localhost:8080/POS_Back_End_war/item?item-ID=' + code,
             method: "delete",
             success: function (res) {
                 alert(res.message);
@@ -272,7 +272,7 @@
         $("#tblItem").empty();
 
         $.ajax({
-            url: 'http://localhost:8080/Back_End/pages/item',
+            url: 'http://localhost:8080/POS_Back_End_war/item',
             method: "get",
             success: function (res) {
                 console.log(res.message);
@@ -304,7 +304,7 @@
         }
 
         $.ajax({
-            url: 'http://localhost:8080/Back_End/pages/item',
+            url: 'http://localhost:8080/POS_Back_End_war/item',
             method: "put",
             contentType: "application/json",
             data:JSON.stringify(item),
