@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/POS_Back_End.iml" filepath="$PROJECT_DIR$/POS_Back_End.iml" />
       <module fileurl="file://$PROJECT_DIR$/POS_Front_End.iml" filepath="$PROJECT_DIR$/POS_Front_End.iml" />
       <module fileurl="file://$PROJECT_DIR$/POS_Using_Spring.iml" filepath="$PROJECT_DIR$/POS_Using_Spring.iml" />
     </modules>
